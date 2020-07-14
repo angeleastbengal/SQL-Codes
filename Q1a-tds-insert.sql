@@ -1,0 +1,120 @@
+--****PLEASE ENTER YOUR DETAILS BELOW****
+--Q1a-tds-insert.sql
+--Student ID: 31131867
+--Student Name: Angel Das
+--Tutorial No: 1 (Tue 12-2 pm)
+--Last Modified: 12-Jun-2020
+
+SET SERVEROUTPUT ON;
+
+
+/* Comments for your marker:
+1. 22 offences are added manually. Atleast 5 offence per year from 2016 to 2019
+2. Vehicle manufacture date is not considered while adding the vehicle number for the offence. It is assumed that drivers
+can use old vehicles as well
+3. Offence number starts with 78 to ensure that the sequence is carry forwarded to task 1b
+*/
+
+/*
+1(a) Load selected tables with your own additional test data
+*/
+--PLEASE PLACE REQUIRED SQL STATEMENT(S) FOR THIS PART HERE
+--Insert statement for Offence
+
+INSERT INTO offence VALUES (78,TO_DATE('2-Jan-2016 08:25 AM','DD-MON-YYYY HH12:MI AM'),'42/2 Browns Road Clayton 3168',99,10000001,'100001','WAUZZZF15KD038432');
+COMMIT;
+
+INSERT INTO offence VALUES (79,TO_DATE('15-Apr-2016 08:25 AM','DD-MON-YYYY HH12:MI AM'),'2/1 Rainforest Turn Caufield 3162',101,10000002,'100004','ZHWEF4ZF2LLA13803');
+COMMIT;
+
+INSERT INTO offence VALUES (80,TO_DATE('15-Jun-2016 07:25 AM','DD-MON-YYYY HH12:MI AM'),'40 Young Street Moneeponds 3039',101,10000001,'100008','ZHWES4ZF8KLA12259');
+COMMIT;
+
+INSERT INTO offence VALUES (81,TO_DATE('15-Aug-2016 07:25 AM','DD-MON-YYYY HH12:MI AM'),'42793 Londonderry Road Clayton 3169',131,10000001,'100266','5TDBK3FH50S049497');
+COMMIT;
+
+INSERT INTO offence VALUES (82,TO_DATE('21-Nov-2016 11:25 AM','DD-MON-YYYY HH12:MI AM'),'42793 Londonderry Road Clayton 3169',131,10000001,'100369','WBAEU33465PR14291');
+COMMIT;
+
+INSERT INTO offence VALUES (83,TO_DATE('7-Feb-2017 10:25 AM','DD-MON-YYYY HH12:MI AM'),'141 Trailsway Center Clayton 3168',101,10000002,'100001','WAUZZZF15KD038432');
+COMMIT;
+
+INSERT INTO offence VALUES (84,TO_DATE('21-Apr-2017 09:25 AM','DD-MON-YYYY HH12:MI AM'),'2/1 Rainforest Turn Caufield 3162',99,10000005,'100004','ZHWEF4ZF2LLA13803');
+COMMIT;
+
+INSERT INTO offence VALUES (85,TO_DATE('15-Jun-2017 07:25 AM','DD-MON-YYYY HH12:MI AM'),'40 Young Street Moneeponds 3039',103,10000001,'100008','ZHWES4ZF8KLA12259');
+COMMIT;
+
+INSERT INTO offence VALUES (86,TO_DATE('15-Aug-2017 07:55 AM','DD-MON-YYYY HH12:MI AM'),'42/2 Browns Road Clayton 3168',131,10000001,'100271','WDZPE8CC1C5714683');
+COMMIT;
+
+INSERT INTO offence VALUES (87,TO_DATE('23-Nov-2017 11:25 AM','DD-MON-YYYY HH12:MI AM'),'89930 Buhler Circle Clayton 3168',131,10000001,'100352','5UXZV4C52BL739734');
+COMMIT;
+
+INSERT INTO offence VALUES (88,TO_DATE('17-Jan-2018 11:25 AM','DD-MON-YYYY HH12:MI AM'),'89930 Buhler Circle Clayton 3168',102,10000002,'100001','WAUZZZF15KD038432');
+--Inserting values in Suspension
+INSERT INTO suspension VALUES ('100001',TO_DATE('17-Jan-2018','DD-MON-YYYY'),
+                    TO_DATE(add_months(TO_DATE('17-Jan-2018','DD-MON-YYYY'), 6), 'DD-MON-YYYY'));
+COMMIT;
+
+
+INSERT INTO offence VALUES (89,TO_DATE('15-Feb-2018 09:55 AM','DD-MON-YYYY HH12:MI AM'),'21 Lunder Junction Clayton 3169',131,10000001,'100383','SALWR2TF0EA352419');
+COMMIT;
+
+INSERT INTO offence VALUES (90,TO_DATE('21-Feb-2018 07:55 AM','DD-MON-YYYY HH12:MI AM'),'89930 Buhler Circle Clayton 3168',131,10000001,'100391','KMHJM81B09U044783');
+COMMIT;
+
+INSERT INTO offence VALUES (91,TO_DATE('15-Apr-2018 07:55 AM','DD-MON-YYYY HH12:MI AM'),'13325 Larry Place Melbourne 3000',131,10000001,'100271','WBAEK73415B409236');
+COMMIT;
+
+INSERT INTO offence VALUES (92,TO_DATE('17-May-2018 09:55 AM','DD-MON-YYYY HH12:MI AM'),'89930 Buhler Circle Clayton 3168',131,10000003,'100358','4T1BD1FK5EU109805');
+COMMIT;
+
+INSERT INTO offence VALUES (93,TO_DATE('15-Jun-2018 09:55 AM','DD-MON-YYYY HH12:MI AM'),'7497 Village Center Clayton 3168',126,10000011,'100011','WMWMF33519T473195');
+COMMIT;
+
+INSERT INTO offence VALUES (94,TO_DATE('31-Aug-2018 07:55 AM','DD-MON-YYYY HH12:MI AM'),'592 Pankratz Plaza Clayton 3168',126,10000011,'100011','WMWMF33519T473195');
+COMMIT;
+
+INSERT INTO offence VALUES (95,TO_DATE('15-Jan-2019 07:55 AM','DD-MON-YYYY HH12:MI AM'),'89930 Buhler Circle Clayton 3168',131,10000001,'100272','VF1AA39A0C0105476');
+COMMIT;
+
+INSERT INTO offence VALUES (96,TO_DATE('2-Feb-2019 09:55 AM','DD-MON-YYYY HH12:MI AM'),'44 Starling Trail Richmond 3121',131,10000001,'100392','WMWRE334X2PD53395');
+COMMIT;
+
+INSERT INTO offence VALUES (97,TO_DATE('19-Feb-2019 07:55 AM','DD-MON-YYYY HH12:MI AM'),'42/2 Browns Road Clayton 3168',131,10000001,'100393','SALTK16493A779719');
+COMMIT;
+
+
+INSERT INTO offence VALUES (98,TO_DATE('23-Mar-2019 07:25 AM','DD-MON-YYYY HH12:MI AM'),'493 Warner Court Lysterfield 3156',99,10000002,'100004','ZHWEF4ZF2LLA13803');
+
+--Inserting values in Suspension
+INSERT INTO suspension VALUES ('100004',TO_DATE('23-Mar-2019','DD-MON-YYYY'),
+                    TO_DATE(add_months(TO_DATE('23-Mar-2019','DD-MON-YYYY'), 6), 'DD-MON-YYYY'));
+
+COMMIT;
+
+INSERT INTO offence VALUES (99,TO_DATE('15-Apr-2019 07:25 AM','DD-MON-YYYY HH12:MI AM'),'38 Church Road Moneeponds 3039',99,10000001,'100008','ZHWES4ZF8KLA12259');
+--Inserting values in Suspension
+INSERT INTO suspension VALUES ('100008',TO_DATE('15-Apr-2019','DD-MON-YYYY'),
+                    TO_DATE(add_months(TO_DATE('15-Apr-2019','DD-MON-YYYY'), 6), 'DD-MON-YYYY'));
+COMMIT;
+
+---------------------------------------QC: Quality Checks:----------------------------------------------------------        
+--SELECT COUNT(DISTINCT LIC_NO) AS C FROM OFFENCE; --Total drivers
+
+--SELECT * FROM OFFENCE WHERE LIC_NO='100389'; --100389 shouldn't be added
+
+--SELECT MIN(OFF_DATETIME) AS ST, MAX(OFF_DATETIME) AS EN FROM OFFENCE; --Minimum date time from offence table
+
+--At least 4 offence per year
+--SELECT TO_CHAR(OFF_DATETIME,'YYYY') AS YR, COUNT(DISTINCT OFF_NO) AS OFF_NO FROM OFFENCE GROUP BY TO_CHAR(OFF_DATETIME,'YYYY');
+
+--SELECT COUNT(DISTINCT VEH_VIN) AS V FROM OFFENCE; --Vehicles involved in offence
+
+--SELECT LIC_NO, COUNT(DISTINCT VEH_VIN) AS CNT FROM OFFENCE GROUP BY LIC_NO; --Vehicles per user
+
+--license per vehicle
+--SELECT VEH_VIN, COUNT(DISTINCT LIC_NO) AS CNT FROM OFFENCE GROUP BY VEH_VIN HAVING COUNT(DISTINCT LIC_NO)>1;
+
+--select TO_CHAR(off_datetime,  'dd-mon-yyyy hh:mi pm') as D from offence;
